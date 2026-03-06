@@ -1,0 +1,15 @@
+Connections
+Flame Sensor
+VCC → 5V
+GND → GND
+DO → Pin 7
+
+Buzzer
+Positive → Pin 9
+Negative → GND
+
+ISD1820 Voice Module
+VCC → 5V
+GND → GND
+PLAYE / P-L → Pin 8
+Speaker → Module speaker pins
