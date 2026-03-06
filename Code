@@ -1,0 +1,26 @@
+int flamePin = 7;   // Flame sensor
+int buzzer = 9;     // Buzzer
+int voice = 8;      // ISD1820 play pin
+
+void setup() {
+  pinMode(flamePin, INPUT);
+  pinMode(buzzer, OUTPUT);
+  pinMode(voice, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+
+  int flameState = digitalRead(flamePin);
+
+  if (flameState == LOW) {   // Flame detected
+    digitalWrite(buzzer, HIGH);   // Turn buzzer ON
+    digitalWrite(voice, HIGH);    // Play recorded audio
+    delay(1000);                  // Audio trigger time
+    digitalWrite(voice, LOW);
+  } 
+  else {
+    digitalWrite(buzzer, LOW);    // Buzzer OFF
+  }
+
+}
